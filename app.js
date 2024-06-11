@@ -5,7 +5,7 @@ const worksArea = document.querySelector(".worksArea")
 let arr = [
     {
         name: "animationScroll",
-        href: "./works/index.html"
+        href: "./works/animation-scroll/index.html"
     },
     {
         name: "CrazyCarusel",
