@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+
+<body>
+    <div class="text">
+        <h1>Intersection Observer API</h1>
+        <h5>意思就是觀察 (Observer) 元素是否接觸到父層以上或視窗元素</h4>
+
+            <h4>語法：</h3>
+                <pre>
+        <code>
+    const observer = new IntersectionObserver(callback, option);    
+    observe.observe(elements);      </code>
+    </pre>
+                <h5>觀測的元素則用 observer.observe (element) ，來觀測指定元素。
+            </h4>
+            <h5>option 是 IntersectionObserver 的屬性，用於判斷指定元素與窗口的交接條件</h5>
+
+            <pre>
+        <code>
+    const option = {
+        root : null,      指定與元素交接的窗口，預設為 Null，是以 Viewpoint當作窗口
+        rootMargin : 0px 0px 0px 0px,    調整指定窗口縮放，順序與 CSS 的 margin 一樣
+        threshold : 0.0,  
+        指定元素的交接範圍百分比，數值介於 0 ~ 1，計算方式為 交接面積 / 元素面積。
+        1. 預設值為 0 ，指的是當元素與窗口交接範圍大於 0%，或小於 0% 的瞬間觸發。
+        2. 當設定為 1 ，指的是當元素與窗口交接範圍大於 100% ，或是小於 100% 的瞬間觸發。
+        如果要在不同範圍都觸發時，則要用 [0, 0.5, 1] 的方式把數值包在陣列裡。
+    }
+        </code>
+    </pre>
+    <h2></h2>
+            <div class="box1">
+                <div class="box1Container">
+                    
+                    <div class="observerBox"></div>
+                </div>
+            </div>
+
+            <div class="box2">
+                <div class="box2Container">
+                    <ul>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                     </ul>
+                </div>
+              
+            </div>
+    </div>
+
+
+    <script src="./animation-scroll01.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,163 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(254, 254, 254);
+}
+
+.wrapper {
+  width: 100%;
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper .container {
+  height: 400px;
+  display: flex;
+  justify-content: start;
+  flex-wrap: nowrap;
+}
+.wrapper .container .card {
+  width: 80px;
+  border-radius: 2rem;
+  background-size: cover;
+  cursor: pointer;
+  overflow: hidden;
+  margin: 0 10px;
+  display: flex;
+  align-items: flex-end;
+  transition: 0.6s cubic-bezier(0.28, -0.03, 0, 0.99);
+  box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.8);
+}
+.wrapper .container .card > .row {
+  color: white;
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.wrapper .container .card > .row > .icon {
+  background: #223;
+  color: white;
+  border-radius: 50%;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+}
+.wrapper .container .card > .row > .description {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+  height: 80px;
+  width: 520px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.3s ease;
+}
+.wrapper .container .card > .row > .description p {
+  color: rgb(255, 255, 255);
+  padding-top: 5px;
+}
+.wrapper .container .card > .row > .description h4 {
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+}
+.wrapper .container input {
+  display: none;
+}
+.wrapper .container input:checked + label {
+  width: 600px;
+}
+.wrapper .container input:checked + label .description {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+.wrapper .container .card[for=c1] {
+  background-image: url("https://img.freepik.com/free-photo/christmas-lantern-with-fir-branch-decoration-snowy-table-defocused-background-generative-ai_1258-150778.jpg");
+}
+.wrapper .container .card[for=c2] {
+  background-image: url("https://www.southernliving.com/thmb/z4U_T1xgFrTniI6zZE6L7xdQyPs=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-865989904-2000-d975a81777fa4df3878a04bec7cc30fc.jpg");
+}
+.wrapper .container .card[for=c3] {
+  background-image: url("https://www.d214.org/cms/lib/IL50000680/Centricity//Domain/906/Summer%20Experience%201920.png");
+}
+.wrapper .container .card[for=c4] {
+  background-image: url("https://static.toiimg.com/photo/46463953.cms");
+}
+
+@media screen and (max-width: 576px) {
+  .wrapper .container {
+    height: 100dvh;
+    flex-direction: column;
+  }
+  .wrapper .container .card {
+    width: 500px;
+    height: 80px;
+    margin: 10px 0;
+    background-position: 50% 50%;
+  }
+  .wrapper .container .card > .row {
+    height: 60px;
+  }
+  .wrapper .container .card > .row > .icon {
+    width: 30px;
+    height: 30px;
+  }
+  .wrapper .container .card > .row > .description {
+    height: 60px;
+    font-size: 1.5dvw;
+    transform: translateX(30px);
+  }
+  .wrapper .container input {
+    display: none;
+  }
+  .wrapper .container input:checked + label {
+    width: 500px;
+    height: 500px;
+  }
+  .wrapper .container input:checked + label .description {
+    opacity: 1 !important;
+    transform: translateX(0) !important;
+  }
+}
+@media screen and (max-width: 300px) {
+  .wrapper .container {
+    height: 100dvh;
+    flex-direction: column;
+  }
+  .wrapper .container .card {
+    width: 300px;
+    height: 80px;
+    margin: 10px 0;
+    background-position: 50% 50%;
+  }
+  .wrapper .container .card > .row {
+    height: 60px;
+  }
+  .wrapper .container .card > .row > .icon {
+    width: 30px;
+    height: 30px;
+  }
+  .wrapper .container .card > .row > .description {
+    height: 60px;
+    font-size: 1.5dvw;
+    transform: translateX(30px);
+  }
+  .wrapper .container input {
+    display: none;
+  }
+  .wrapper .container input:checked + label {
+    width: 300px;
+    height: 300px;
+  }
+  .wrapper .container input:checked + label .description {
+    opacity: 1 !important;
+    transform: translateX(0) !important;
+  }
+}/*# sourceMappingURL=main.css.map */

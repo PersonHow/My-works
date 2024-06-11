@@ -1,0 +1,86 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100dvh;
+    background-image: url('./christopher-gower-m_HRfLhgABo-unsplash.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+nav {
+    background: rgb(255, 255, 255);
+    box-shadow: 3px 3px 5px rgb(0, 0, 0, 0.1);
+
+    ul {
+        width: 100%;
+        list-style: none;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    li {
+        height: 50px;
+    }
+
+    a {
+        height: 100%;
+        padding: 0 30px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        color: black
+    }
+
+    li:first-child {
+        margin-right: auto;
+    }
+}
+
+.sidebar {
+    position: fixed;
+    height: 100dvh;
+    width: 250px;
+    top: 0;
+    right: 0;
+    background-color: rgb(255, 255, 255,0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0px 10px rgb(0, 0, 0, 0.1);
+    list-style: none;
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    a,
+    li {
+        width: 100%;
+    }
+}
+
+.menu-button{
+    display: none;
+}
+
+@media screen and (min-width:300px) and (max-width:430px) {
+    .hideOnMobile{
+        display: none;
+    }
+    .menu-button{
+        display: block;
+    }
+    .sidebar{
+        width: 100%;
+    }
+}
+
+// @media screen and (min-width:768px){
+//     .sidebar{
+//         width: 100%;
+//     }
+// }

@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Jersey 10", sans-serif;
+}
+
+.text {
+    width: 100%;
+    height: 200dvh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 50px 10%;
+
+
+    pre {
+        background: rgb(0, 0, 0);
+        color: white;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px black;
+    }
+
+    .box1 {
+        width: 100%;
+        height: 300px;
+        overflow-y: scroll;
+        border: 1px solid black;
+        margin: 3% 0;
+        border-radius: 5px;
+
+        .box1Container {
+            width: 100%;
+            height: 100dvh;
+            position: relative;
+
+            .observerBox {
+                width: 400px;
+                height: 100px;
+                border: 1px solid black;
+                margin: 50% auto;
+            }
+        }
+    }
+    .box2 {
+        width: 100%;
+        height: 300px;
+        overflow-y: scroll;
+        border: 1px solid black;
+        margin: 3% 0;
+        border-radius: 5px;
+
+        .box2Container {
+            width: 100%;
+            height: 100dvh;
+            padding: 0 5%;
+
+        }
+
+        ul{
+            font-size: 36px;
+            li{
+                margin: 5%;
+            }
+        }
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+    margin: 10px 0px;
+}
+
+h5,
+h6 {
+    margin: 10px 20px;
+}
+
+
+
+
+
